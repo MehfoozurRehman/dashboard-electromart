@@ -1,6 +1,6 @@
 import Select from "react-select";
 
-export default function TableEntryStatus() {
+export default function TableEntryStatus({ onChange, defaultValue, options }) {
   return (
     <div
       className="container__main__content__listing__header__left__filter"
@@ -8,16 +8,9 @@ export default function TableEntryStatus() {
     >
       <Select
         placeholder="Active"
-        options={[
-          {
-            value: "Active",
-            label: "Active",
-          },
-          {
-            value: "Deactive",
-            label: "Deactive",
-          },
-        ]}
+        options={options}
+        defaultValue={defaultValue}
+        onChange={onChange}
         theme={(theme) => ({
           ...theme,
           borderRadius: 0,
