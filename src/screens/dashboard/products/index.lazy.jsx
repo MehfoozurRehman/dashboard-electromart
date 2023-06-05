@@ -75,25 +75,29 @@ export default function Products() {
             Status
           </div>
           <div className="container__main__content__listing__table__header__entry">
+            Featured
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Image
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
             Name
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Supplier
+            Products
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Brand
+            Price
+          </div>
+
+          <div className="container__main__content__listing__table__header__entry">
+            Stock
           </div>
           <div className="container__main__content__listing__table__header__entry">
             Category
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Sub-Category
-          </div>
-          <div className="container__main__content__listing__table__header__entry">
-            Tag
-          </div>
-          <div className="container__main__content__listing__table__header__entry">
-            Cost of unit
+            Description
           </div>
         </div>
         <div className="container__main__content__listing__table__content">
