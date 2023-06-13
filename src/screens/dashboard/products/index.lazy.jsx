@@ -84,7 +84,7 @@ export default function Products() {
             Name
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Products
+            Brand
           </div>
           <div className="container__main__content__listing__table__header__entry">
             Price

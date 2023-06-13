@@ -23,26 +23,11 @@ export default function ProductAdd() {
         </div>
         <div className="product__form__col__panel">
           <div className="product__form__col__panel__heading">Pricing</div>
-          <Input
-            type="number"
-            label="Cost of unit"
-            placeholder="Enter cost of unit"
-          />
+
           <Input
             type="number"
             label="Selling price"
             placeholder="Enter selling price"
-          />
-          <Input
-            type="number"
-            label="Discount price"
-            placeholder="Enter discount price"
-          />
-
-          <Input
-            type="number"
-            label="Tax rate (%)"
-            placeholder="Enter tax rate"
           />
         </div>
         <div className="product__form__col__panel">
@@ -91,42 +76,6 @@ export default function ProductAdd() {
               { value: "No", label: "No" },
             ]}
           />
-
-          <Select
-            label="Taxable"
-            options={[
-              { value: "Yes", label: "Yes" },
-              { value: "No", label: "No" },
-            ]}
-          />
-        </div>
-        <div className="product__form__col__panel">
-          <div className="product__form__col__panel__heading">Options</div>
-          <Input
-            type="number"
-            label="Cost of unit"
-            placeholder="Enter cost of unit"
-          />
-          <InputMulti
-            type="text"
-            options={options}
-            setOptions={setOptions}
-            label="Cost of unit"
-            placeholder="Enter cost of unit"
-          />
-          <div className="product__form__col__panel__btn">
-            <button
-              style={{
-                backgroundColor: "black",
-                padding: "7px 2em",
-                borderRadius: "20px",
-                color: "white",
-                cursor: "pointer",
-              }}
-            >
-              Done
-            </button>
-          </div>
         </div>
       </div>
     </div>
