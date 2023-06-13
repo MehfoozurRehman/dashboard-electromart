@@ -121,7 +121,7 @@ function TableEntry({ product, getData }) {
   return (
     <div className="container__main__content__listing__table__content__list">
       <div className="container__main__content__listing__table__content__list__entry">
-        <TableEntryEditButton state={{ product }} />
+        <TableEntryEditButton state={{ ...product }} />
         <TableEntryDeleteButton
           onClick={() => {
             axios.delete(`products/${product._id}`).then(() => {
