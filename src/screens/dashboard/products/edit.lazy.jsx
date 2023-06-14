@@ -23,12 +23,15 @@ export default function ProductEdit() {
 
   const [image, setImage] = useState(null);
 
+  const [stock, setStock] = useState("");
+
   useEffect(() => {
     if (state) {
       setName(state.name);
       setBrand(state.brand);
       setDescription(state.description);
       setPrice(state.price);
+      setStock(state.stock);
       setCategory({
         label: state.category === true ? "Yes" : "No",
         value: state.category === true ? true : false,
@@ -88,6 +91,13 @@ export default function ProductEdit() {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Enter selling price"
+          />
+          <Input
+            type="number"
+            label="Add Stock"
+            value={price}
+            onChange={(e) => setStock(e.target.value)}
+            placeholder="Enter Stock"
           />
         </div>
         <div className="product__form__col__panel">
