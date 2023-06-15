@@ -1,8 +1,6 @@
 import { Input, Select, Textarea } from "components";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-
-import { ImageUploaderMultiple } from "../../../components/ImageUploaderMultiple";
 import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
 import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
