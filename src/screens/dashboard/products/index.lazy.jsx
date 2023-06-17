@@ -45,7 +45,7 @@ export default function Products() {
   return (
     <div className="container__main__content__listing">
       <div className="container__main__content__listing__header">
-        <div className="container__main__content__listing__header__left">
+        {/* <div className="container__main__content__listing__header__left">
           <div className="container__main__content__listing__header__left__search">
             <input
               type="text"
@@ -56,7 +56,7 @@ export default function Products() {
               className="container__main__content__listing__header__left__search__field"
             />
           </div>
-        </div>
+        </div> */}
         <div className="container__main__content__listing__header__right">
           <Link
             to={location.pathname.toLowerCase() + "/add"}
