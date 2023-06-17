@@ -7,17 +7,18 @@ import {
 import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import axios from "../../../utils/axios";
+import { useLocation } from "react-router-dom";
+
 export default function Categories() {
   const location = useLocation();
-  // const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getData = () => {
     setLoading(true);
     axios.get("categories").then((res) => {
-      setProducts(res.data);
+      setCategory(res.data);
       setLoading(false);
     });
   };
@@ -52,45 +53,33 @@ export default function Categories() {
           </div>
         </div>
         <div className="container__main__content__listing__table__content">
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
+          {category.map((item) => (
+            <TableEntry item={item} key={item._id} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-function TableEntry() {
+function TableEntry({ item }) {
   return (
     <div className="container__main__content__listing__table__content__list">
       <div className="container__main__content__listing__table__content__list__entry">
-        <TableEntryEditButton />
-        <TableEntryDeleteButton />
+        <TableEntryEditButton
+          to={`/dashboard/categories/edit/${item?._id}`}
+          state={{ ...item }}
+        />
+        <TableEntryDeleteButton
+          onClick={() => {
+            axios.delete(`categories/${item?._id}`).then((res) => {
+              console.log(res);
+            });
+          }}
+        />
       </div>
-      <TableEntryText>Amra</TableEntryText>
-      <TableEntryImage />
+      <TableEntryText>{item?.name}</TableEntryText>
+      <TableEntryImage src={item?.img} />
     </div>
   );
 }
