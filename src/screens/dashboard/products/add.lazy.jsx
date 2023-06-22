@@ -85,7 +85,7 @@ export default function ProductAdd() {
           />
         </div>
         <div className="product__form__col__panel">
-          <div className="product__form__col__panel__heading">Media</div>
+          <div className="product__form__col__panel__heading">Image</div>
           <ImageUploaderSingle
             label="Image"
             image={image === null ? null : URL.createObjectURL(image)}

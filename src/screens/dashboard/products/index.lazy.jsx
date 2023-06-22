@@ -74,9 +74,9 @@ export default function Products() {
           <div className="container__main__content__listing__table__header__entry">
             Status
           </div>
-          <div className="container__main__content__listing__table__header__entry">
+          {/* <div className="container__main__content__listing__table__header__entry">
             Featured
-          </div>
+          </div> */}
           <div className="container__main__content__listing__table__header__entry">
             Image
           </div>
@@ -155,7 +155,7 @@ function TableEntry({ product, getData }) {
             });
         }}
       />
-      <TableEntryStatus
+      {/* <TableEntryStatus
         defaultValue={{
           value: product.isFeatured,
           label: product.isFeatured ? "Featured" : "Not Featured",
@@ -179,7 +179,7 @@ function TableEntry({ product, getData }) {
               getData();
             });
         }}
-      />
+      /> */}
       <TableEntryImage src={product.img} />
       <TableEntryText className="container__main__content__listing__table__content__list__entry">
         {product.name}
