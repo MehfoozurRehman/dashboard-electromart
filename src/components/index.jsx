@@ -9,7 +9,6 @@ const Avatar = lazy(() => import("./Avatar"));
 const Input = lazy(() => import("./Input"));
 const Textarea = lazy(() => import("./Textarea"));
 const Select = lazy(() => import("./Select"));
-const RichTextarea = lazy(() => import("./RichTextarea"));
 const TableEntryStatus = lazy(() => import("./TableEntryStatus"));
 const TableEntryDeleteButton = lazy(() => import("./TableEntryDeleteButton"));
 const TableEntryDescription = lazy(() => import("./TableEntryDescription"));
@@ -33,7 +32,6 @@ export {
   Input,
   Textarea,
   Select,
-  RichTextarea,
   TableEntryStatus,
   TableEntryDeleteButton,
   TableEntryDescription,

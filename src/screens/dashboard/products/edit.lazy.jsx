@@ -1,12 +1,14 @@
 import { Input, Select, Textarea } from "components";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
+import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
+import { categories, getCategoryName } from "../../../utils/constants";
 
 export default function ProductEdit() {
   const { state } = useLocation();
+  const navigate = useNavigate();
   const backLocation = useBackLocation();
 
   const [name, setName] = useState("");
@@ -19,7 +21,7 @@ export default function ProductEdit() {
 
   const [category, setCategory] = useState({});
 
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
 
   const [stock, setStock] = useState("");
 
@@ -31,8 +33,8 @@ export default function ProductEdit() {
       setPrice(state.price);
       setStock(state.stock);
       setCategory({
-        label: state.category === true ? "Yes" : "No",
-        value: state.category === true ? true : false,
+        label: getCategoryName(state.category),
+        value: state.category,
       });
       setImage(state.img);
     }
@@ -50,6 +52,7 @@ export default function ProductEdit() {
       })
       .then((res) => {
         alert("Product updated successfully");
+        navigate(backLocation);
       })
       .catch((err) => {
         console.error(err);
@@ -93,7 +96,7 @@ export default function ProductEdit() {
           <Input
             type="number"
             label="Add Stock"
-            value={price}
+            value={stock}
             onChange={(e) => setStock(e.target.value)}
             placeholder="Enter Stock"
           />
@@ -102,8 +105,10 @@ export default function ProductEdit() {
           <div className="product__form__col__panel__heading">Media</div>
           <ImageUploaderSingle
             label="Image"
-            image={image}
-            setImage={setImage}
+            value={image}
+            onChange={(e) => {
+              setImage(e);
+            }}
           />
         </div>
       </div>
@@ -114,13 +119,12 @@ export default function ProductEdit() {
             padding: "2em",
           }}
         >
-          <Link
-            to={backLocation}
+          <button
             onClick={handleSubmit}
             className="container__main__content__details__buttons__button container__main__content__details__buttons__primary"
           >
             Save Changes
-          </Link>
+          </button>
           <Link
             to={backLocation}
             className="container__main__content__details__buttons__button container__main__content__details__buttons__secondary"
@@ -131,10 +135,7 @@ export default function ProductEdit() {
         <div className="product__form__col__panel">
           <Select
             label="Product Category"
-            options={[
-              { value: true, label: "Yes" },
-              { value: false, label: "No" },
-            ]}
+            options={categories}
             value={category}
             onChange={(e) => setCategory(e)}
           />

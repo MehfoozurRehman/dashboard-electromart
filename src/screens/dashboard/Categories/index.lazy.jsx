@@ -71,15 +71,13 @@ function TableEntry({ item }) {
           state={{ ...item }}
         />
         <TableEntryDeleteButton
-          onClick={() => {
-            axios.delete(`categories/${item?._id}`).then((res) => {
-              console.log(res);
-            });
-          }}
+          onClick={() => axios.delete(`categories/${item?._id}`)}
         />
       </div>
       <TableEntryText>{item?.name}</TableEntryText>
-      <TableEntryImage src={item?.img} />
+      <TableEntryImage
+        src={import.meta.env.VITE_CLOUDNAIRY_API_URL + item?.img}
+      />
     </div>
   );
 }

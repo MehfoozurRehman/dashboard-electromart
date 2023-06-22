@@ -92,8 +92,8 @@ function ProductBrowseEntry() {
       onClick={() => setSelected(!selected)}
     >
       <img
-        src={product}
-        alt=""
+        src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product}
+        alt={product}
         className="customer__detail__popup__overlay__product__entry__image"
       />
       <div className="customer__detail__popup__overlay__product__entry__name">

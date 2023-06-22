@@ -12,6 +12,7 @@ import Loading from "../../../layouts/loading";
 import { TableEntryDescription } from "../../../components";
 import axios from "../../../utils/axios";
 import { useLocation } from "react-router-dom";
+import { getCategoryName } from "../../../utils/constants";
 
 export default function Products() {
   const location = useLocation();
@@ -180,7 +181,9 @@ function TableEntry({ product, getData }) {
             });
         }}
       /> */}
-      <TableEntryImage src={product.img} />
+      <TableEntryImage
+        src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
+      />
       <TableEntryText className="container__main__content__listing__table__content__list__entry">
         {product.name}
       </TableEntryText>
@@ -194,7 +197,7 @@ function TableEntry({ product, getData }) {
         {product.stock}
       </TableEntryText>
       <TableEntryText className="container__main__content__listing__table__content__list__entry">
-        {product.category}
+        {getCategoryName(product.category)}
       </TableEntryText>
       <TableEntryDescription className="container__main__content__listing__table__content__list__entry">
         {product?.description}

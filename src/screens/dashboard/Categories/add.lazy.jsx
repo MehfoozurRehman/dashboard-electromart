@@ -1,6 +1,6 @@
 import { Input, Select, Textarea } from "components";
 
-import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
+import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import { Link } from "router";
 import axios from "../../../utils/axios";
 import { useBackLocation } from "global";
@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function CategorieAdd() {
   const [name, setName] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const backLocation = useBackLocation();
   return (
     <div className="container__main__content__details">
@@ -20,7 +20,13 @@ export default function CategorieAdd() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <ImageUploaderSingle label="Image" image={image} setImage={setImage} />
+        <ImageUploaderSingle
+          label="Image"
+          value={image}
+          onChange={(e) => {
+            setImage(e);
+          }}
+        />
       </div>
 
       <div className="container__main__content__details__buttons">

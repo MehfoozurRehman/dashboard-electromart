@@ -5,7 +5,7 @@ export default function OrderProductsCardRow() {
     <div className="order__details__main__products__card__content__row">
       <div className="order__details__main__products__card__content__row__left">
         <img
-          src={product}
+          src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
           alt="product"
           className="order__details__main__products__card__content__row__left__img"
         />

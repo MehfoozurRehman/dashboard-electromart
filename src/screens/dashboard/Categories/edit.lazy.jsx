@@ -1,4 +1,4 @@
-import { ImageUploaderSingle } from "../../../components/ImageUploaderSingle";
+import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import { Input } from "components";
 import { Link } from "router";
 import axios from "../../../utils/axios";
@@ -21,7 +21,13 @@ export default function CategorieEdit() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <ImageUploaderSingle label="Image" image={image} setImage={setImage} />
+        <ImageUploaderSingle
+          label="Image"
+          value={image}
+          onChange={(e) => {
+            setImage(e);
+          }}
+        />
       </div>
 
       <div className="container__main__content__details__buttons">
