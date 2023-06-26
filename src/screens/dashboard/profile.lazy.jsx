@@ -17,7 +17,7 @@ export default function Profile() {
           </div>
           <div className="container__main__content__details__main__row__profile__row__content">
             <div className="container__main__content__details__main__row__profile__row__content__name">
-              John doe
+              ashii
             </div>
             <div className="container__main__content__details__main__row__profile__row__content__email">
               johndoe@gmail.com

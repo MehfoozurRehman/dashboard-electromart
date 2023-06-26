@@ -16,7 +16,7 @@ export default function Index() {
           e.preventDefault();
           setUser({
             profilePic: avatar,
-            name: "John",
+            name: "ashii",
           });
           navigate("/dashboard", { replace: true });
         }}

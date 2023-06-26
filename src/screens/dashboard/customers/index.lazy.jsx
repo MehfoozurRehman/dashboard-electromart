@@ -68,7 +68,7 @@ function TableEntry() {
         <TableEntryViewButton to="/john-doe" />
       </div>
 
-      <TableEntryText>john</TableEntryText>
+      <TableEntryText>asim</TableEntryText>
       <TableEntryText>deved</TableEntryText>
       <TableEntryText>+92343323454</TableEntryText>
       <TableEntryText>Abraaa323@gmail.com</TableEntryText>

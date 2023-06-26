@@ -10,12 +10,7 @@ export function useBackLocation() {
 
 export const userAtom = atomWithStorage("user", null);
 
-export const sidebarCategories = [
-  "",
-  "User Management",
-  "Order Management",
-  "Settings",
-];
+export const sidebarCategories = [""];
 
 export const sidebarEnteries = [
   {
@@ -45,7 +40,7 @@ export const sidebarEnteries = [
     path: "/dashboard",
   },
   {
-    category: "User Management",
+    category: "",
     icon: (
       <svg
         width="17"
@@ -67,7 +62,7 @@ export const sidebarEnteries = [
   },
 
   {
-    category: "Order Management",
+    category: "",
     icon: (
       <svg
         width="18"
@@ -84,7 +79,7 @@ export const sidebarEnteries = [
     path: "/dashboard/orders",
   },
   {
-    category: "Order Management",
+    category: "",
     icon: (
       <svg
         width="16"
@@ -109,7 +104,7 @@ export const sidebarEnteries = [
   },
 
   {
-    category: "Settings",
+    category: "",
     icon: (
       <svg
         width="18"
@@ -129,7 +124,7 @@ export const sidebarEnteries = [
   },
 
   {
-    category: "Settings",
+    category: "",
     icon: (
       <svg
         width="18"
