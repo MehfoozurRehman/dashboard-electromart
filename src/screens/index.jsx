@@ -64,7 +64,7 @@ export default function Index() {
           id="password"
         />
         <button type="submit" className="login__container__form__button">
-          {processing ? "Processing..." : "Login"}
+          {processing ? "please wait...." : "Login"}
         </button>
       </form>
     </div>
