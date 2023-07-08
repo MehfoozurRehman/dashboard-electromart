@@ -1,4 +1,4 @@
-import { Input, Select, Textarea } from "components";
+import { Input } from "components";
 
 import ImageUploaderSingle from "../../../components/ImageUploaderSingle";
 import { Link } from "router";

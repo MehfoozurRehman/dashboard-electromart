@@ -146,7 +146,7 @@ export const sidebarEnteries = [
         </defs>
       </svg>
     ),
-    name: "Content management",
-    path: "/dashboard/content-management",
+    name: "Banners",
+    path: "/dashboard/banners",
   },
 ];
