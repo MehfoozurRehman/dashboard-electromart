@@ -1,7 +1,5 @@
 import {
-  Avatar,
   TableEntryDeleteButton,
-  TableEntryImage,
   TableEntryText,
   TableEntryViewButton,
 } from "components";
@@ -30,9 +28,7 @@ export default function orders() {
           <div className="container__main__content__listing__table__header__entry">
             Actions
           </div>
-          <div className="container__main__content__listing__table__header__entry">
-            images
-          </div>
+
           <div className="container__main__content__listing__table__header__entry">
             Order ID
           </div>
@@ -46,13 +42,22 @@ export default function orders() {
             Phone No.
           </div>
           <div className="container__main__content__listing__table__header__entry">
-            Items
-          </div>
-          <div className="container__main__content__listing__table__header__entry">
             Status
           </div>
           <div className="container__main__content__listing__table__header__entry">
             Payment
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Card Number
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Card Name
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Card Date
+          </div>
+          <div className="container__main__content__listing__table__header__entry">
+            Card Cvv
           </div>
         </div>
         <div className="container__main__content__listing__table__content">
@@ -60,26 +65,7 @@ export default function orders() {
           <TableEntry />
           <TableEntry />
           <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
+
           <TableEntry />
           <TableEntry />
           <TableEntry />
@@ -98,21 +84,16 @@ function TableEntry() {
         <TableEntryViewButton />
         <TableEntryDeleteButton />
       </div>
-      <TableEntryImage
-        className="container__main__content__listing__table__content__list__entry"
-        style={{ gap: 10, flexWrap: "wrap" }}
-      >
-        <Avatar className="container__main__content__listing__table__content__list__entry__img" />
-        <Avatar className="container__main__content__listing__table__content__list__entry__img" />
-        <Avatar className="container__main__content__listing__table__content__list__entry__img" />
-      </TableEntryImage>
       <TableEntryText>123456789</TableEntryText>
       <TableEntryText>11/12/22</TableEntryText>
       <TableEntryText>qasim</TableEntryText>
       <TableEntryText>+123234560</TableEntryText>
-      <TableEntryText>6</TableEntryText>
       <TableEntryText>Delivery Made</TableEntryText>
       <TableEntryText>Payment Pending</TableEntryText>
+      <TableEntryText>1233434</TableEntryText>
+      <TableEntryText>Arsi</TableEntryText>
+      <TableEntryText>11/12/22</TableEntryText>
+      <TableEntryText>1002</TableEntryText>
     </div>
   );
 }

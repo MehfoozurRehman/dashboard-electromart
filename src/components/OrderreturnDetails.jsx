@@ -9,82 +9,34 @@ export default function OrderreturnDetails({ label, buttonLabel }) {
       <div className="order__details__main__details__card__content">
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Return Preference Date
+            Name
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            233
+            asim
           </div>
         </div>
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Total No. of Pieces
+            Phone Number
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            334
+            +92-3000121212
           </div>
         </div>
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Product Total Amount
+            Email Addess
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            45423254
+            arsi@gmail.com
           </div>
         </div>
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Product Discount
+            Address
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            343434
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Discount Rule Used
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            abcx
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            VAT
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            2233
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Net Discount
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            1212
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Net Due Amount
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            343434
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Payment Status
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            Padding
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Payment Date
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            12/03/22
+            zam zam hotel
           </div>
         </div>
       </div>

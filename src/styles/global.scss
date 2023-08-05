@@ -419,6 +419,30 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.proved__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0em;
+}
+.proved__btn__btn {
+  width: 300px;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 1em 2em;
+  border-radius: 50px;
+  transition: 500ms ease-in-out;
+}
+.proved__btn__btn:hover {
+  width: 350px;
+  background-color: var(--primary);
+  color: var(--colorReverse);
+  transition: 700ms ease-in-out;
+  border: 1px solid var(--primary);
+  color: white;
+  cursor: pointer;
+}
 @media (max-width: 1440px) {
   .container__main__content__details__main__input__field__wrapper__image {
     width: 120px;

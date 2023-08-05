@@ -9,82 +9,35 @@ export default function OrderDetailsCard({ label, buttonLabel }) {
       <div className="order__details__main__details__card__content">
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Total No.Of Pieces
+            Card Name
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            23
+            Arsiii
           </div>
         </div>
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Product Total Amount
+            Card Number
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            3343
+            33430909090
+          </div>
+        </div>
+
+        <div className="order__details__main__details__card__content__row">
+          <div className="order__details__main__details__card__content__row__label">
+            Card Date
+          </div>
+          <div className="order__details__main__details__card__content__row__value">
+            01/02/23
           </div>
         </div>
         <div className="order__details__main__details__card__content__row">
           <div className="order__details__main__details__card__content__row__label">
-            Delivery Charges
+            Card Cvv
           </div>
           <div className="order__details__main__details__card__content__row__value">
-            45454
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Delivery Discount
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            343434
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Coupon Used
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            abcx
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            VAT
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            2233
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Net Due Amount
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            1212
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Amount Paid
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            343434
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Payment Status
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            Padding
-          </div>
-        </div>
-        <div className="order__details__main__details__card__content__row">
-          <div className="order__details__main__details__card__content__row__label">
-            Payment Date
-          </div>
-          <div className="order__details__main__details__card__content__row__value">
-            12/03/22
+            9797
           </div>
         </div>
       </div>
