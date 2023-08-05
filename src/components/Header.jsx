@@ -3,7 +3,6 @@ import { Fragment, useEffect, useState } from "react";
 import { sidebarEnteries, userAtom } from "global";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import Avatar from "./Avatar";
 import ClickAwayListener from "react-click-away-listener";
 import { Link } from "router";
 import { ThemeSwitch } from "components";
