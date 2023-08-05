@@ -90,11 +90,6 @@ export default function Header({ setSidebarOpen }) {
             className="container__main__header__right__panel__main"
             onClick={() => setProfilePanelOpen(!profilePanelOpen)}
           >
-            <Avatar
-              src={user?.profilePic}
-              alt="user"
-              className="container__main__header__right__panel__main__img"
-            />
             <div className="container__main__header__right__panel__main__label">
               {user?.name?.length > 20
                 ? user?.name.substring(0, 20) + "..."
@@ -109,15 +104,6 @@ export default function Header({ setSidebarOpen }) {
               }}
             >
               <div className="container__main__header__right__panel__content">
-                <Link
-                  to="/dashboard/profile"
-                  replace={true}
-                  className="container__main__header__right__panel__content__entry"
-                  onClick={() => setProfilePanelOpen(false)}
-                >
-                  <User size={20} color="currentColor" />
-                  Profile
-                </Link>
                 <Link
                   to="/"
                   onClick={() => setUser(null)}
