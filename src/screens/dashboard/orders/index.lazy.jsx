@@ -3,10 +3,31 @@ import {
   TableEntryText,
   TableEntryViewButton,
 } from "components";
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
 
 import { Search } from "react-feather";
+import axios from "../../../utils/axios";
 
-export default function orders() {
+export default function Orders() {
+  const [orders, setOrders] = useState([]);
+
+  const getOrders = () => {
+    axios
+      .get("orders")
+      .then((res) => {
+        setOrders(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getOrders();
+  }, []);
+
+  console.log(orders);
+
   return (
     <div className="container__main__content__listing">
       <div className="container__main__content__listing__header">
@@ -28,7 +49,6 @@ export default function orders() {
           <div className="container__main__content__listing__table__header__entry">
             Actions
           </div>
-
           <div className="container__main__content__listing__table__header__entry">
             Order ID
           </div>
@@ -61,39 +81,59 @@ export default function orders() {
           </div>
         </div>
         <div className="container__main__content__listing__table__content">
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
-          <TableEntry />
+          {orders.map((order) => (
+            <TableEntry key={order._id} data={order} onFetch={getOrders} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-function TableEntry() {
+function TableEntry({ data, onFetch }) {
   return (
     <div className="container__main__content__listing__table__content__list">
       <div className="container__main__content__listing__table__content__list__entry">
-        <TableEntryViewButton />
-        <TableEntryDeleteButton />
+        <TableEntryViewButton state={data} />
+        <TableEntryDeleteButton
+          onClick={() => {
+            console.log(data._id);
+            axios
+              .delete(`orders/${data._id}`)
+              .then((res) => {
+                console.log(res);
+                onFetch();
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}
+        />
       </div>
-      <TableEntryText>123456789</TableEntryText>
-      <TableEntryText>11/12/22</TableEntryText>
-      <TableEntryText>qasim</TableEntryText>
-      <TableEntryText>+123234560</TableEntryText>
-      <TableEntryText>Delivery Made</TableEntryText>
-      <TableEntryText>Payment Pending</TableEntryText>
-      <TableEntryText>1233434</TableEntryText>
-      <TableEntryText>Arsi</TableEntryText>
-      <TableEntryText>11/12/22</TableEntryText>
-      <TableEntryText>1002</TableEntryText>
+      <TableEntryText>{data._id}</TableEntryText>
+      <TableEntryText>
+        {dayjs(data.createdAt).format("DD/MM/YYYY")}
+      </TableEntryText>
+      <TableEntryText>
+        {data.username ? data.username : "No Name"}
+      </TableEntryText>
+      <TableEntryText>{data.phone ? data.phone : "No Phone"}</TableEntryText>
+      <TableEntryText>{data.status}</TableEntryText>
+      <TableEntryText>{data.total ? data.total : "No Payment"}</TableEntryText>
+      <TableEntryText>
+        {data.cardNumber ? data.cardNumber : "No Card Number"}
+      </TableEntryText>
+      <TableEntryText>
+        {data.cardName ? data.cardName : "No Card Name"}
+      </TableEntryText>
+      <TableEntryText>
+        {data.cardDate
+          ? dayjs(data.cardDate).format("DD/MM/YYYY")
+          : "No Card Date"}
+      </TableEntryText>
+      <TableEntryText>
+        {data.cardCvv ? data.cardCvv : "No Card Cvv"}
+      </TableEntryText>
     </div>
   );
 }
