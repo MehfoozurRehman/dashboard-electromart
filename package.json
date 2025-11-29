@@ -32,7 +32,7 @@
     "@types/react": "^18.3.27",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.7.0",
-    "sass": "^1.94.1",
+    "sass": "^1.94.2",
     "typescript": "^5.9.3",
     "vite": "^4.5.14",
     "vite-plugin-chunk-split": "^0.5.0",
