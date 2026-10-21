@@ -2,7 +2,7 @@
 
 An admin dashboard for the Electromart store, for managing products, categories, banners and orders against the Electromart API.
 
-**Status:** In progress. Products, categories, banners and orders are wired to a hosted API with list, add and edit screens, but the dashboard home uses hard-coded chart data, a customer card shows placeholder text, and there are no tests or documented deployment URL.
+**Status:** In progress. Products and categories have list, add and edit screens wired to a hosted API, orders and banners are partly wired, but the dashboard home uses hard-coded chart data, a customer card shows placeholder text, and there are no tests or documented deployment URL.
 
 ## The problem
 
